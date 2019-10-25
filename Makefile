@@ -200,6 +200,9 @@ LIBS += -lcurses
 ifeq ($(uname_S),Darwin)
 	LIBS += -liconv
 endif
+ifeq ($(uname_O),Msys)
+	LIBS += -liconv
+endif
 ifeq ($(uname_O),Cygwin)
 	LIBS += -liconv
 	X = .exe
